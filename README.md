@@ -1,2 +1,4 @@
 # faq-accordion
-FAQ Accordion challange from frontendmentor
+FAQ Accordion challenge from frontendmentor
+
+See it here: https://faq-accordion-nf.netlify.app/
