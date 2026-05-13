@@ -15,7 +15,7 @@ faqContents.forEach(content => {
         });
 
             plusIcon.addEventListener('keydown', (event) => {
-                if(event.code === 'Enter' || event.code === 'Space') {
+                if(event.key === 'Enter' || event.key === 'Space') {
                     answer.classList.add('is-visible');
                     answer.classList.remove('is-hidden');
                     plusIcon.classList.add('is-hidden');
@@ -33,7 +33,7 @@ faqContents.forEach(content => {
         });
 
             minusIcon.addEventListener('keydown', (event) => {
-                if(event.code === 'Enter' || event.code === 'Space') {
+                if(event.key === 'Enter' || event.key === 'Space') {
                     answer.classList.remove('is-visible');
                     answer.classList.add('is-hidden');
                     plusIcon.classList.remove('is-hidden');
