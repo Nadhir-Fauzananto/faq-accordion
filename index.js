@@ -7,30 +7,42 @@ faqContents.forEach(content => {
 
   if (answer) {
     plusIcon.addEventListener('click', () => {
-      answer.style.display = 'block';
-      plusIcon.style.display = 'none';
-      minusIcon.style.display = 'block';
+      answer.classList.remove('is-hidden');
+      answer.classList.add('is-visible');
+      plusIcon.classList.remove('is-visible');
+      plusIcon.classList.add('is-hidden');
+      minusIcon.classList.remove('is-hidden');
+      minusIcon.classList.add('is-visible');
     });
 
     plusIcon.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
-        answer.style.display = 'block';
-        plusIcon.style.display = 'none';
-        minusIcon.style.display = 'block';
+        answer.classList.remove('is-hidden');
+        answer.classList.add('is-visible');
+        plusIcon.classList.remove('is-visible');
+        plusIcon.classList.add('is-hidden');
+        minusIcon.classList.remove('is-hidden');
+        minusIcon.classList.add('is-visible');
       }
     });
 
     minusIcon.addEventListener('click', () => {
-      answer.style.display = 'none';
-      plusIcon.style.display = 'block';
-      minusIcon.style.display = 'none';
+      answer.classList.remove('is-visible');
+      answer.classList.add('is-hidden');
+      plusIcon.classList.remove('is-hidden');
+      plusIcon.classList.add('is-visible');
+      minusIcon.classList.remove('is-visible');
+      minusIcon.classList.add('is-hidden');
     });
 
     minusIcon.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
-        answer.style.display = 'none';
-        plusIcon.style.display = 'block';
-        minusIcon.style.display = 'none';
+        answer.classList.remove('is-visible');
+        answer.classList.add('is-hidden');
+        plusIcon.classList.remove('is-hidden');
+        plusIcon.classList.add('is-visible');
+        minusIcon.classList.remove('is-visible');
+        minusIcon.classList.add('is-hidden');
       }
     });
   } 
