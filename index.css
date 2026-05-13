@@ -70,13 +70,6 @@ ul {
     margin-bottom: 1.5em;
 }
 
-/* .faq-content:nth-child(-n + 5)::after {
-    content: "";
-    width: 100%;
-    height: 1.5px;
-    background-color: hsl(292, 16%, 49%, 0.1);
-} */
-
 hr {
     border: none;
     height: 1.5px;

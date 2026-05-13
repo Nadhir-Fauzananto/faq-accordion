@@ -3,7 +3,7 @@ const faqContents = document.querySelectorAll('.faq-content');
 faqContents.forEach(content => {
   const plusIcon = content.querySelector('.plus-icon');
   const minusIcon = content.querySelector('.minus-icon');
-  const answer = content.querySelector('p');
+  const answer = content.querySelector('.answer');
 
   if (answer) {
     if (!plusIcon || !minusIcon) {
@@ -11,13 +11,13 @@ faqContents.forEach(content => {
       return;
     }
       plusIcon.addEventListener('click', () => {
-      answer.classList.remove('is-hidden');
-      answer.classList.add('is-visible');
-      plusIcon.classList.remove('is-visible');
-      plusIcon.classList.add('is-hidden');
-      plusIcon.setAttribute('aria-expanded', 'true');
-      minusIcon.classList.remove('is-hidden');
-      minusIcon.classList.add('is-visible');
+        answer.classList.remove('is-hidden');
+        answer.classList.add('is-visible');
+        plusIcon.classList.remove('is-visible');
+        plusIcon.classList.add('is-hidden');
+        plusIcon.setAttribute('aria-expanded', 'true');
+        minusIcon.classList.remove('is-hidden');
+        minusIcon.classList.add('is-visible');
     });
 
       plusIcon.addEventListener('keydown', (event) => {
