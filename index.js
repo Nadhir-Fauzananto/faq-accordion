@@ -14,11 +14,13 @@ faqContents.forEach(content => {
             minusIcon.classList.remove('is-hidden');
         });
 
-            plusIcon.addEventListener('keydown', () => {
-            answer.classList.add('is-visible');
-            answer.classList.remove('is-hidden');
-            plusIcon.classList.add('is-hidden');
-            minusIcon.classList.remove('is-hidden');
+            plusIcon.addEventListener('keydown', (event) => {
+                if(event.code === 'Enter' || event.code === 'Space') {
+                    answer.classList.add('is-visible');
+                    answer.classList.remove('is-hidden');
+                    plusIcon.classList.add('is-hidden');
+                    minusIcon.classList.remove('is-hidden');
+                }
         });
     }
 
@@ -30,15 +32,18 @@ faqContents.forEach(content => {
             minusIcon.classList.add('is-hidden');
         });
 
-            minusIcon.addEventListener('keydown', () => {
-            answer.classList.remove('is-visible');
-            answer.classList.add('is-hidden');
-            plusIcon.classList.remove('is-hidden');
-            minusIcon.classList.add('is-hidden');
+            minusIcon.addEventListener('keydown', (event) => {
+                if(event.code === 'Enter' || event.code === 'Space') {
+                    answer.classList.remove('is-visible');
+                    answer.classList.add('is-hidden');
+                    plusIcon.classList.remove('is-hidden');
+                    minusIcon.classList.add('is-hidden');
+                }
         });
     }
-    else {
-        console.error("Answer not found.");}
   }
+    else {
+        console.error("Answer not found.");
+}
   
 });
