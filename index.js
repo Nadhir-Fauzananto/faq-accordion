@@ -15,6 +15,7 @@ faqContents.forEach(content => {
       answer.classList.add('is-visible');
       plusIcon.classList.remove('is-visible');
       plusIcon.classList.add('is-hidden');
+      plusIcon.setAttribute('aria-expanded', 'true');
       minusIcon.classList.remove('is-hidden');
       minusIcon.classList.add('is-visible');
     });
@@ -25,6 +26,7 @@ faqContents.forEach(content => {
           answer.classList.add('is-visible');
           plusIcon.classList.remove('is-visible');
           plusIcon.classList.add('is-hidden');
+          plusIcon.setAttribute('aria-expanded', 'true');
           minusIcon.classList.remove('is-hidden');
           minusIcon.classList.add('is-visible');
         }
@@ -35,8 +37,10 @@ faqContents.forEach(content => {
         answer.classList.add('is-hidden');
         plusIcon.classList.remove('is-hidden');
         plusIcon.classList.add('is-visible');
+        plusIcon.setAttribute('aria-expanded', 'false');
         minusIcon.classList.remove('is-visible');
         minusIcon.classList.add('is-hidden');
+        minusIcon.setAttribute('aria-expanded', 'false');
     });
 
       minusIcon.addEventListener('keydown', (event) => {
@@ -45,8 +49,10 @@ faqContents.forEach(content => {
           answer.classList.add('is-hidden');
           plusIcon.classList.remove('is-hidden');
           plusIcon.classList.add('is-visible');
+          plusIcon.setAttribute('aria-expanded', 'false');
           minusIcon.classList.remove('is-visible');
           minusIcon.classList.add('is-hidden');
+          minusIcon.setAttribute('aria-expanded', 'false');
         }
     });
     } 
