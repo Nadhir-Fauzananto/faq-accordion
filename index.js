@@ -10,8 +10,6 @@ faqContents.forEach(content => {
       console.error('Plus or minus icon not found for this FAQ item.');
       return;
     }
-
-    else {
       plusIcon.addEventListener('click', () => {
       answer.classList.remove('is-hidden');
       answer.classList.add('is-visible');
@@ -51,8 +49,7 @@ faqContents.forEach(content => {
           minusIcon.classList.add('is-hidden');
         }
     });
-    }
-  } 
+    } 
   else {
     console.error('Answer not found for this FAQ item.');
   }
