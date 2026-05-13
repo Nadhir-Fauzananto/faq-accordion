@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline-style: solid;
+    background-color: blue;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -109,11 +114,13 @@ hr {
 }
 
 .is-visible {
-    display: block;
+    visibility: visible;
 }
 
 .is-hidden {
-    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
 
 @media (min-width: 376px) {
