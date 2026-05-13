@@ -5,15 +5,40 @@ faqContents.forEach(content => {
   const minusIcon = content.querySelector('.minus-icon');
   const answer = content.querySelector('p');
 
-  plusIcon.addEventListener('click', () => {
-    answer.style.display = 'block';
-    plusIcon.style.display = 'none';
-    minusIcon.style.display = 'block';
-  });
+  if (answer) {
+        if (plusIcon) {
+            plusIcon.addEventListener('click', () => {
+            answer.classList.add('is-visible');
+            answer.classList.remove('is-hidden');
+            plusIcon.classList.add('is-hidden');
+            minusIcon.classList.remove('is-hidden');
+        });
 
-  minusIcon.addEventListener('click', () => {
-    answer.style.display = 'none';
-    plusIcon.style.display = 'block';
-    minusIcon.style.display = 'none';
-  });
+            plusIcon.addEventListener('keydown', () => {
+            answer.classList.add('is-visible');
+            answer.classList.remove('is-hidden');
+            plusIcon.classList.add('is-hidden');
+            minusIcon.classList.remove('is-hidden');
+        });
+    }
+
+    if (minusIcon) {
+            minusIcon.addEventListener('click', () => {
+            answer.classList.remove('is-visible');
+            answer.classList.add('is-hidden');
+            plusIcon.classList.remove('is-hidden');
+            minusIcon.classList.add('is-hidden');
+        });
+
+            minusIcon.addEventListener('keydown', () => {
+            answer.classList.remove('is-visible');
+            answer.classList.add('is-hidden');
+            plusIcon.classList.remove('is-hidden');
+            minusIcon.classList.add('is-hidden');
+        });
+    }
+    else {
+        console.error("Answer not found.");}
+  }
+  
 });

@@ -16,7 +16,6 @@ body {
     color: hsl(292, 16%, 49%);
     margin: 0;
     line-height: 1.5em;
-    display: none;
     margin-right: 2em;
 }
 
@@ -97,17 +96,24 @@ hr {
     border: none;
     background-size: cover;
     width: 50px;
-    height: 50px
+    height: 50px;
 }
 
 .minus-icon {
-    display: none;
     background-image: url("images/icon-minus.svg");
     background-color: transparent;
     border: none;
     background-size: cover;
     width: 50px;
     height: 50px
+}
+
+.is-visible {
+    display: block;
+}
+
+.is-hidden {
+    display: none;
 }
 
 @media (min-width: 376px) {
