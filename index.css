@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-*:focus {
-    outline-style: solid;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -101,6 +97,10 @@ hr {
     background-size: cover;
     width: 50px;
     height: 50px;
+}
+
+.plus-icon:focus, .minus-icon:focus {
+    outline: 2px solid blue;
 }
 
 .minus-icon {
